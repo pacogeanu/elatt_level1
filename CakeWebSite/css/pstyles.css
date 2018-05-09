@@ -1,0 +1,17 @@
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 10%;
+}
+
+p, h1, h2 {
+	padding-left:20%;
+	padding-right:20%;
+	text-align:center;
+}
+
+span {
+    display: block;
+	text-align:center;
+}
