@@ -1,0 +1,26 @@
+
+h1,h2, h3, h4, h5, h6 {
+    color: #5C4033;
+    text-align:center;
+    font:sans-serif;
+}
+
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+p {
+    text-align:center;
+    font:sans-serif;
+    color:#006633;
+    /*background-color:#F6DDCC;*/
+    margin-left:3%;
+    margin-right:3%;
+}
+
+body {
+    font-family: Sans-Serif;
+    background-color:#FEF9E7;
+}
