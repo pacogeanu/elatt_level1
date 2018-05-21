@@ -1,0 +1,36 @@
+
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" type="text/css" href="css/mystyles.css">
+</head>
+<body>
+<div class="header">
+  <h1>Rowing  Club </h1>
+</div>
+
+<div class="topnav">
+  <a class="active" id="defaultOpen" href="#" onclick="openPage(event, 'home')">Home</a>
+  <a href="#about">About</a>
+  <a href="contact.html">Contact</a>
+  <input type="text" placeholder="Search..">
+</div>
+
+<div class="menu">
+	<button class="tablinks" onclick="openPage(event, 'menrowing')">Men's Rowing</button>
+	<button class="tablinks" onclick="openPage(event, 'womenrowing')">Women's Rowing</button>
+	<button class="tablinks" onclick="openPage(event, 'learntorow')">Learn to Row</button>
+	<button class="tablinks" onclick="openPage(event, 'recreational')">Recreational Rowing & Explore Rowing</button>
+</div>
+
+<div class="main">
+	<img id="contentImage" src=""></img>
+	<h3 id="contentHeading"></h3>
+	<p id="contentText"></p>
+</div>
+
+<script src="js/scripts.js"></script>
+<script>document.getElementById("defaultOpen").click();</script>
+</body>
+</html>
