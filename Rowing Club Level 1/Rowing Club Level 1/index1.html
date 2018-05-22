@@ -2,7 +2,6 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <link rel="stylesheet" type="text/css" href="css/mystyles.css">
 </head>
 <body>
@@ -18,51 +17,55 @@
 </div>
 
 <div class="menu">
-  <button class="tablinks" id="defaultOpen" onclick="openCity(event, 'womenrowing')">Women's Rowing</button>
-  <button class="tablinks" onclick="openCity(event, 'menrowing')">Men's Rowing</button>
-  <button class="tablinks" onclick="openCity(event, 'learntorow')">Learn to Row</button>
-  <button class="tablinks" onclick="openCity(event, 'recreational')">Recreational Rowing & Explore Rowing</button>
+  <button class="tablinks" id="defaultOpen" onclick="openCategory(event, 'womenrowing')">Women's Rowing</button>
+  <button class="tablinks" onclick="openCategory(event, 'menrowing')">Men's Rowing</button>
+  <button class="tablinks" onclick="openCategory(event, 'learntorow')">Learn to Row</button>
+  <button class="tablinks" onclick="openCategory(event, 'recreational')">Recreational Rowing & Explore Rowing</button>
 </div>
 
+<div  class="main">
 <div id="womenrowing" class="tabcontent" >
+  <img id="contentImage" src="images/imogen2.bmp"></img>
   <h3>Women's Rowing</h3>
-  <p>Paris is the capital of France.</p> 
+  <p>LRC has a small, predominantly lightweight, women’s squad that is focussed on developing athletes to perform at the highest level of the sport; principally 
+  trialling for the GB team, aiming to win at Women’s Henley and the National Championships and race at Henley Royal Regatta. Under the guidance of Phil Bourguignon,
+  LRC senior coach, the group trains in small boats for the majority of the year, mostly single and double sculls, with crew sculling boats formed for the main head 
+  races in the winter season. Off the water, the squad train alongside the men’s squad in the gym and on the erg, completing 10 – 12 sessions a week.</p> 
 </div>
 
 <div id="menrowing" class="tabcontent" style="display:none">
+  <img id="contentImage" src="images/MR.jpg"></img>
   <h3>Men's Rowing</h3>
-  <p>London is the capital city of England.</p>
+  <p>The highest performance level for men’s rowing is Henley Royal Regatta and trialing for the Great Britain rowing team for Olympic Games and World Championships.  
+  However, the heart and bulk of the men’s squad at London Rowing Club are not full-time internationals but people trying to enjoy competitive rowing while balancing
+  their family, work and/or education commitments. They'd love to have you contribute alongside them in their passion for the beautiful sport of rowing. Our coaches
+  can provide you with whatever you should want to enjoy your rowing; whether it’s a training program, technical advice, a calendar of racing or a fair chance at selection
+  for the racing crews.</p>
 </div>
 
 <div id="learntorow" class="tabcontent" style="display:none">
+  <img id="contentImage" src="images/3.bmp"></img>
   <h3>Learn to Row</h3>
-  <p>Tokyo is the capital of Japan.</p>
+  <p>Learn to Row
+  London Rowing Club offers "Learn to Row" courses which provide an introduction to our exciting sport.  Aimed at those with no previous experience, the courses take 
+  participants through the basics of technique, both on and off the water, as well as navigation and safety. The courses culminate in some fun side-by-side races to 
+  give everyone a taste of racing.  Courses last for six weeks, with two sessions per week, each lasting two hours.   The courses are headed up by a qualified coach 
+  who are assisted by Club members.</p>
 </div>
 
 <div id="recreational" class="tabcontent" style="display:none">
+  <img id="contentImage" src="images/HomePage-8.jpg"></img>
   <h3>Recreational Rowing & Explore Rowing</h3>
-  <p>Tokyo is the capital of Japan.</p>
+  <p>There is a strong social aspect to the happy boaters. It is normal to meet up for a drink and a chat after an outing and on the first Wednesday of the month a dinner is held at the Club.
+  We are also enthusiastic rowing tourists, meet up with other English Clubs and row different bits of river. We also go abroad and in recent time have visited Venice for the Vogalonga, Berlin, Madrid, Paris and Holland.
+  Those joining us have some previous rowing experience, but we will shortly be running a “Learn to Row” course, which will provide an entrance for those with no rowing experience.</p>
+</div>
 </div>
 
+<script src="js/scripts.js"></script>
 <script>
-function openCity(evt, cityName) {
-	console.log(evt,cityName);
-    var i, tabcontent, tablinks;
-    tabcontent = document.getElementsByClassName("tabcontent");
-    for (i = 0; i < tabcontent.length; i++) {
-        tabcontent[i].style.display = "none";
-    }
-    tablinks = document.getElementsByClassName("tablinks");
-    for (i = 0; i < tablinks.length; i++) {
-        tablinks[i].className = tablinks[i].className.replace(" active", "");
-    }
-    document.getElementById(cityName).style.display = "block";
-    evt.currentTarget.className += " active";
-    console.log(evt.currentTarget);
-}
-
-// Get the element with id="defaultOpen" and click on it
-document.getElementById("defaultOpen").click();
+	// Get the element with id="defaultOpen" and click on it
+	document.getElementById("defaultOpen").click();
 </script>
      
 

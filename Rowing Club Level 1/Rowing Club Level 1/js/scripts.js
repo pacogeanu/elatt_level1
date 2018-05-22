@@ -8,11 +8,11 @@ var objContent = {
 	'home':  { contentText : textHome, contentImage : "images/img1.bmp" },
 	'womenrowing':    { contentText : textWomenRowing, contentImage : "images/imogen2.bmp" },
 	'menrowing': { contentText : textMenRowing, contentImage : "images/MR.jpg" },
-	'learntorow': { contentText : textLearnToRow, contentImage : "images/1.bmp" },
-	'recreational': { contentText : textRecreational, contentImage : "images/2.bmp" }
+	'learntorow': { contentText : textLearnToRow, contentImage : "images/3.bmp" },
+	'recreational': { contentText : textRecreational, contentImage : "images/HomePage-8.jpg" }
 };
 
-function loadPage(aPage){
+function openPage2(aPage){
     document.getElementById("demo").innerHTML = "<object type='text/html' data=' " + aPage + "' height='100%' width='100%' ></object>";
 };
 
@@ -21,12 +21,25 @@ function openPage(evt, aPage){
     document.getElementById("contentText").innerHTML = objContent[aPage].contentText.text;
     document.getElementById("contentImage").src = objContent[aPage].contentImage;
 
-
     tablinks = document.getElementsByClassName("tablinks");
     for (i = 0; i < tablinks.length; i++) {
         tablinks[i].className = tablinks[i].className.replace(" active", "");
     }
 
     evt.currentTarget.className += " active";
-
 };
+
+function openCategory(evt, cityName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(cityName).style.display = "block";
+    evt.currentTarget.className += " active";
+    console.log(evt.currentTarget);
+}
