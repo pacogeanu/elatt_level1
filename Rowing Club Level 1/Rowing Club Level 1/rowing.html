@@ -1,0 +1,39 @@
+
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" type="text/css" href="css/mystyles.css">
+</head>
+<body>
+<div class="header">
+	<img src="images/LRC_Logo.jpg" height="100px" width="120px">
+</div>
+
+<div class="topnav center">
+ <ul>
+  <li><a href="index.html" onclick="openMenu(event)">HOME</a></li>
+  <li><a class="active" href="rowing.html" onclick="openMenu(event)">ROWING</a></li>
+  <li><a href="learntorow.html" onclick="openMenu(event)">LEARN TO ROW</a></li>
+  <li><a href="#about">ABOUT</a></li>
+  <li><a href="#contact.html">CONTACT US</a></li>
+  <li><input type="text" placeholder="Search.."></li>
+</ul>
+</div>
+
+<div class="menu">
+	<button class="tablinks active" id="defaultOpen2" onclick="openPage(event, 'menrowing')">Men's Rowing</button>
+	<button class="tablinks" onclick="openPage(event, 'womenrowing')">Women's Rowing</button>
+	<button class="tablinks" onclick="openPage(event, 'recreational')">Recreational Rowing & Explore Rowing</button>
+</div>
+
+<div class="main">
+	<img id="contentImage" style="float:left;margin-right:10px" src=""></img>
+	<h3 id="contentHeading"></h3>
+	<p id="contentText"></p>
+</div>	
+
+<script src="js/scripts.js"></script>
+<script>document.getElementById("defaultOpen2").click();</script>
+</body>
+</html>

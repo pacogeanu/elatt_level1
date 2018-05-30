@@ -1,14 +1,35 @@
 
 <html>
 <head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" type="text/css" href="css/mystyles.css">
 </head>
 <body>
-	<img id="contentImage" src=""></img>
-	<h3 id="contentHeading"></h3>
-	<p id="contentText"></p>
+<div class="header">
+  <img src="images/LRC_Logo.jpg" height="100px" width="120px">
+</div>
 
-Learn to Row
-London Rowing Club offers "Learn to Row" courses which provide an introduction to our exciting sport.  Aimed at those with no previous experience, the courses take participants through the basics of technique, both on and off the water, as well as navigation and safety. The courses culminate in some fun side-by-side races to give everyone a taste of racing.  Courses last for six weeks, with two sessions per week, each lasting two hours.   The courses are headed up by a qualified coach who are assisted by Club members.
+
+<div class="topnav center">
+ <ul>
+  <li><a href="index.html" onclick="openMenu(event)">HOME</a></li>
+  <li><a href="rowing.html" onclick="openMenu(event)">ROWING</a></li>
+  <li><a class="active" href="learntorow.html" onclick="openMenu(event)">LEARN TO ROW</a></li>
+  <li><a href="#about">ABOUT</a></li>
+  <li><a href="#contact.html">CONTACT US</a></li>
+  <li><input type="text" placeholder="Search.."></li>
+</ul>
+</div>
+
+<div id="content" class="center">
+  <img id="contentImage" src="" style="float:left; margin-right:10px"></img>
+  <h3 id="contentHeading" style=""></h3>
+  <div id="contentText" style=""></div>
+</div>  
+
+<script src="js/scripts.js"></script>
+<script>openPage(null, 'learntorow')</script>
 
 </body>
 </html>

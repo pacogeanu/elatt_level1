@@ -27,8 +27,21 @@ function openPage(evt, aPage){
         tablinks[i].className = tablinks[i].className.replace(" active", "");
     }
 
-    evt.currentTarget.className += " active";
+    if(evt)
+        evt.currentTarget.className += " active";
 };
+
+function openMenu(evt){
+    menuoptions = document.querySelectorAll('.topnav>ul>li>a');
+    for (const li of menuoptions) {
+        console.log(li.textContent);
+        li.className = li.className.replace("active", "");
+    }
+
+    if(evt)
+        evt.currentTarget.className += "active";
+
+}
 
 function openCategory(evt, cityName) {
     var i, tabcontent, tablinks;
@@ -44,3 +57,5 @@ function openCategory(evt, cityName) {
     evt.currentTarget.className += " active";
     console.log(evt.currentTarget);
 }
+
+//document.querySelectorAll('.topnav>ul>li>a')

@@ -14,14 +14,21 @@ img {
     margin-right: auto;
 }
 
+.center {
+    margin: auto;
+    width: 70%;
+    padding: 10px;
+}
+
 .header {
-    /*background-color: #f1f1f1;*/
+    background-color: #e6eeff;
     padding: 20px;
     text-align: center;
+    height:15%;
 }
 
 .menu {
-    width: 25%;
+    width: 18%;
     float: left;
     padding: 15px;
 }
@@ -51,26 +58,25 @@ img {
     background-color: #6699ff;
 }
 
-.main {
-    width: 75%;
-    float: left;
-    padding: 15px;
-}
-
-
 .topnav {
   overflow: hidden;
-  background-color: #e9e9e9;
+  background-color: #e6eeff;
+  text-align: center;
+  width: 90%;
 }
 
+.topnav li{
+  list-style-type: none;
+  display: inline;
+} 
+
 .topnav a {
-  float: left;
-  display: block;
+  display:inline-block;
   color: black;
-  text-align: center;
   padding: 14px 16px;
   text-decoration: none;
-  font-size: 17px;
+  font-size: 18px;
+  text-align: center;
 }
 
 .topnav a:hover {
@@ -84,7 +90,7 @@ img {
 }
 
 .topnav input[type=text] {
-  float: right;
+  /*float: right;*/
   padding: 6px;
   margin-top: 8px;
   margin-right: 16px;
