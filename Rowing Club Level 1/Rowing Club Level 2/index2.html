@@ -1,0 +1,43 @@
+
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" type="text/css" href="css/mystyles.css">
+</head>
+<body>
+<div class="header" style="height:auto;
+overflow:auto;">
+	<img src="images/LRC_Logo.png" height="100px" width="120px">
+</div>
+
+<div class="flex-container center">
+ <ul>
+  <li><a class ="menuoption" id="defaultOpen" href="#" onclick="openPage(event, 'home', 0)">HOME</a></li>
+  <li><a class ="menuoption" href="#rowing" onclick="openPage(event, 'menrowing', 1)">ROWING</a></li>
+  <li><a class ="menuoption" href="#learntorow" onclick="openPage(event, 'learntorow', 0)">LEARN TO ROW</a></li>
+  <li><a class ="menuoption" href="#about" onclick="openPage(event, 'learntorow', 0)">ABOUT</a></li>
+  <li><a class ="menuoption" href="#contact" onclick="openPage(event, 'learntorow', 0)">CONTACT US</a></li>
+  <li><input class ="menuoption" type="text" placeholder="Search.."></li>
+</ul>
+</div>
+
+<div id="content" class="center">
+	<div class="menu">
+		<button class="tablinks" id="defaultOpen2" onclick="openPage(event, 'menrowing', 1)">Men's Rowing</button>
+		<button class="tablinks" onclick="openPage(event, 'womenrowing', 1)">Women's Rowing</button>
+		<button class="tablinks" onclick="openPage(event, 'recreational', 1)">Recreational Rowing & Explore Rowing</button>
+	</div>
+	<div class="animage">
+		<img id="contentImage" src="" style="float:left; margin-right:10px"></img>
+	</div>
+	<div class="atext">
+		<h3 id="contentHeading" style="display:inline-block;"></h3>
+		<div id="contentText" style=""></div>
+	</div>
+</div>	
+
+<script src="js/scripts.js"></script>
+<script>document.getElementById("defaultOpen").click();</script>
+</body>
+</html>

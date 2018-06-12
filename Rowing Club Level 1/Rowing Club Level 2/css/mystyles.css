@@ -58,11 +58,36 @@ img {
     background-color: #6699ff;
 }
 
+
+
+/***** flexbox start*****/
+.flex-container {
+  display: flex;
+  background-color: DodgerBlue;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-container li{
+  list-style-type: none;
+  display: inline;
+} 
+
+.flex-container a {
+  display:inline-block;
+  color: black;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 18px;
+  text-align: center;
+}
+/*****/
+
 .topnav {
   overflow: hidden;
   background-color: #e6eeff;
+  background-color: DodgerBlue;
   text-align: center;
-  width: 90%;
 }
 
 .topnav li{
