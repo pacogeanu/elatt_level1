@@ -1,0 +1,51 @@
+
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" type="text/css" href="css/mystyles.css">
+</head>
+<body>
+<!--div class="header" style="height:auto;
+overflow:auto;">
+	<img src="images/LRC_Logo.jpg" height="100px" width="120px">
+</div-->
+
+<div class="flex-container-topnav">
+	<ul>
+		<li><a class ="menuoption" href="#" onclick="openPage(event, 'home', 0)"><img class="bau responsive" src="images/LRC_Logo.jpg" style="height:100px; width: 100px;vertical-align: middle; "></a></li>
+		<li><a class ="menuoption" id="defaultOpen" href="#" onclick="openPage(event, 'home', 0)">HOME</a></li>
+		<li><a class ="menuoption" href="#rowing" onclick="openPage(event, 'menrowing', 1)">ROWING</a></li>
+		<li><a class ="menuoption" href="#learntorow" onclick="openPage(event, 'learntorow', 0)">LEARN TO ROW</a></li>
+		<li><a class ="menuoption" href="#about" onclick="openPage(event, 'learntorow', 0)">ABOUT</a></li>
+		<li><a class ="menuoption" href="#contact" onclick="openPage(event, 'learntorow', 0)">CONTACT US</a></li>
+		<li><input class ="menuoption" type="text" placeholder="Search.."></li>
+		
+	</ul>
+</div>
+
+
+<div id="content" class="row">	
+	<div class="flex-container-menu column left" style="background-color:#aaa;">
+		<button class="tablinks" id="defaultOpen2" onclick="openPage(event, 'menrowing', 1)">Men's Rowing</button>
+		<button class="tablinks" onclick="openPage(event, 'womenrowing', 1)">Women's Rowing</button>
+		<button class="tablinks" onclick="openPage(event, 'recreational', 1)">Recreational Rowing & Explore Rowing</button>
+	</div>
+
+	<div class="column middle" style="background-color:#bbb;">
+		<img id="contentImage" src="" style="width:80%" ></img>
+	</div>
+
+	<div class="column right" style="background-color:#ccc;">
+		<h3 id="contentHeading" ></h3>
+		<div id="contentText" style=""></div>
+	</div>
+
+</div>
+
+
+<script src="js/scripts.js"></script>
+<script>document.getElementById("defaultOpen").click();</script>
+
+</body>
+</html>
