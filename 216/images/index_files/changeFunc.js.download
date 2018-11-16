@@ -1,15 +1,5 @@
-var myContent = {'TRIANGLE': {description:"1st geometric shape", image:"images/flower1.jpg"}, "SQUARE": {description:"2nd geometric shape", image:"images/flower2.jp3g"}, "CIRCLE": {description:"3rd geometric shape", image:"images/flower3.jpg"}};
-
 function updateInfo(elem) {
-    var description = myContent[elem.innerText].description;
-    var image = myContent[elem.innerText].image;
-    
-    return function (){
-        document.getElementsByClassName("description")[0].innerHTML = description;
-    }
-    
-
-//    document.getElementsByClassName("image").innerHTML = image;
+    console.log("GOOOOOO");
 }
 
 function chgPgBg(elem){
@@ -51,7 +41,7 @@ for (let el of document.getElementById("images").children) {
    el.onclick = chgPgImg(el);
 }
 
-
+var myContent = {'TRIANGLE': {description:"1st geometric shape", image:"images/flower1.jpg"}, "SQUARE": {description:"2nd geometric shape", image:"images/flower2.jp3g"}, "CIRCLE": {description:"3rd geometric shape", image:"images/flower3.jpg"}};
 
 
 
