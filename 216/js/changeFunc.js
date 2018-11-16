@@ -1,4 +1,6 @@
-var myContent = {'TRIANGLE': {description:"1st geometric shape", image:"images/flower1.jpg"}, "SQUARE": {description:"2nd geometric shape", image:"images/flower2.jp3g"}, "CIRCLE": {description:"3rd geometric shape", image:"images/flower3.jpg"}};
+var myContent = {'TRIANGLE': {description:"A triangle is a polygon with three edges and three vertices. It is one of the basic shapes in geometry. A triangle with vertices A, B, and C is denoted &#9651;ABC.", image:"url('images/triangle.png')"}, "SQUARE": {description:"In geometry, a square is a regular quadrilateral, which means that it has four equal sides and four equal angles (90-degree angles). It can also be defined as a rectangle in which two adjacent sides have equal length. A square with vertices ABCD would be denoted &#9634;ABCD.", image:"url('images/square.png')"}, "CIRCLE": {description:"A circle is a simple closed shape. It is the set of all points in a plane that are at a given distance from a given point, the centre; equivalently it is the curve traced out by a point that moves so that its distance from a given point is constant. The distance between any of the points and the centre is called the radius.", image:"url('images/circle.png')"}};
+
+//document.getElementsByClassName("objects")[0].children[0].click();
 
 function updateInfo(elem) {
     var description = myContent[elem.innerText].description;
@@ -6,10 +8,17 @@ function updateInfo(elem) {
     
     return function (){
         document.getElementsByClassName("description")[0].innerHTML = description;
+        document.getElementsByClassName("image")[0].style.backgroundImage = image;
+        document.getElementsByClassName("image")[0].style.backgroundSize = "cover";
+        
+        for (let el of document.getElementsByClassName("objects")[0].children) {
+            el.style.fontWeight = "normal";
+            el.style.color = "initial";
+        }
+        
+        elem.style.fontWeight = "bold";
+        elem.style.color = "blue";
     }
-    
-
-//    document.getElementsByClassName("image").innerHTML = image;
 }
 
 function chgPgBg(elem){
@@ -50,6 +59,7 @@ for (let el of document.getElementById("foreground").children) {
 for (let el of document.getElementById("images").children) {
    el.onclick = chgPgImg(el);
 }
+
 
 
 
