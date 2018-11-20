@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<!-- Note that the <li> elements inside <ul> are not indented (whitespaces). 
+If they were, the first child node of <ul> would be a text node 
+-->
+<ul id="myList"><li>Coffee</li><li>Tea</li><li>Milk</li></ul>
+
+<p>Click the button to remove the first item from the list.</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<script>
+function myFunction() {
+    var list = document.getElementById("myList");
+    x = list.removeChild(list.childNodes[1]);
+    
+    console.log(x);
+    document.getElementById("myList").appendChild(x);
+}
+</script>
+
+</body>
+</html>
