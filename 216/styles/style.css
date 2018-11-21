@@ -41,12 +41,6 @@ h1{
     margin-right: 5px;
 }
 
-.square {
-    width:20px; 
-    height:20px;
-    display: inline-block;
-}
-
 ul > li {   
     list-style-type: none;
     margin:0 20px 20px 0;  
@@ -79,11 +73,17 @@ ul {
 
 .area.image {
     width: 350px;
-    height: 300px;
+    height: 350px;
 }
 
 .area.description {
     text-align: center;
+}
+
+.square {
+    width:20px; 
+    height:20px;
+    display: inline-block;
 }
 
 .dot {
@@ -94,3 +94,12 @@ ul {
     display: inline-block;
 }
 
+.triangle {
+    height: 0px;
+    width: 0px;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-bottom-width: 20px;
+    border-bottom-style:  solid;
+    border-bottom-color: #94575E;
+}

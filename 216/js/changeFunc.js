@@ -16,7 +16,7 @@ function updateInfo(elem) {
         
         for (let el of document.getElementsByClassName("objects")[0].children) {
             el.style.fontWeight = "normal";
-            el.style.color = "initial";
+            //el.style.color = "initial";
         }
         
         elem.style.fontWeight = "bold";
@@ -24,7 +24,7 @@ function updateInfo(elem) {
     }
 }
 
-function chgPgBg(elem){
+function chgPgBgColor(elem){
     var aColor = elem.style.backgroundColor;
     return function() {
         document.body.style.backgroundImage = "none";
@@ -33,8 +33,21 @@ function chgPgBg(elem){
     };  
 }
 
-function chgPgText(elem){
+function chgPgTextColor(elem){
     var aColor = elem.style.backgroundColor;
+    return function() {
+        //document.fgColor = aColor; -- document.fgColor is deprecated in DOM Level 2 HTML.
+        document.body.style.color = aColor;
+        for (let el of document.getElementsByClassName("objects")[0].children) {
+            el.style.color = aColor;
+        }
+        document.getElementsByTagName("h1")[0].style.color = aColor;
+    };  
+}
+
+function chgPgTextColor2(elem){
+    //var aColor = elem.style.backgroundColor;
+    var aColor = elem.style.borderBottomColor;
     return function() {
         //document.fgColor = aColor; -- document.fgColor is deprecated in DOM Level 2 HTML.
         document.body.style.color = aColor;
@@ -57,12 +70,12 @@ for (let el of document.getElementsByClassName("objects")[0].children) {
 }
 
 for (let el of document.getElementById("background").children) {
-   el.onclick = chgPgBg(el);
+   el.onclick = chgPgBgColor(el);
 
 }
 
 for (let el of document.getElementById("foreground").children) {
-   el.onclick = chgPgText(el);
+   el.onclick = chgPgTextColor2(el);
 }
 
 for (let el of document.getElementById("images").children) {
@@ -79,7 +92,9 @@ function createTheme1(){
 }
 
 function createTheme2() {
-    var objList = document.getElementById("main2");   document.getElementById("main2").removeChild(document.getElementById("main2").children[1]);
+    var objList = document.getElementById("main2");
+    var el = document.getElementById("main2").removeChild(document.getElementById("main2").children[0]);
+    objList.appendChild(el);
 }
 
 function createTheme3() {
@@ -91,10 +106,7 @@ function createTheme3() {
     for (let el of document.getElementsByClassName("customArea")){
         el.style.borderStyle = "none";
         el.style.backgroundColor = "transparent";
-
     }
-    document.getElementById("main1").removeChild(document.getElementById("main1").children[1]);
-    
 }
 
 
