@@ -5,7 +5,6 @@ function updateInfo(elem) {
     var image = myContent[elem.innerText].image;
     
     return function (){
-        
         if(document.getElementsByClassName("description")[0])
             document.getElementsByClassName("description")[0].innerHTML = description;
         
@@ -16,11 +15,9 @@ function updateInfo(elem) {
         
         for (let el of document.getElementsByClassName("objects")[0].children) {
             el.style.fontWeight = "normal";
-            //el.style.color = "initial";
         }
         
         elem.style.fontWeight = "bold";
-        //elem.style.color = "blue";
     }
 }
 
@@ -92,9 +89,10 @@ function createTheme1(){
 }
 
 function createTheme2() {
-    var objList = document.getElementById("main2");
-    var el = document.getElementById("main2").removeChild(document.getElementById("main2").children[0]);
-    objList.appendChild(el);
+    var newNode = document.getElementsByTagName("body")[0].removeChild(document.getElementsByTagName("body")[0].children[3]);
+    var parentDiv = document.getElementsByTagName("body")[0];
+    var referenceNode = document.getElementsByTagName("body")[0].children[2];
+    parentDiv.insertBefore(newNode, referenceNode);
 }
 
 function createTheme3() {
@@ -108,6 +106,7 @@ function createTheme3() {
         el.style.backgroundColor = "transparent";
     }
 }
+
 
 
 
