@@ -1,0 +1,45 @@
+body {
+    background-color: #6e4337 !important;
+}
+
+nav .navbar-nav li a{
+  color: white !important;
+}
+
+#main{
+    display:flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+#picture{
+    background-image: url("../images/cup.jpg");
+    
+    background-size: cover;
+    height: 500px;
+    width: 900px;
+}
+
+#mainMenu {
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.itemCup {
+    display:flex;
+    align-items: center;
+    background-image: url("../images/cup3.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    height:200px;
+    width:270px;
+    padding-right:30px;
+}
+
+.newheight {
+    height:100px;
+}
