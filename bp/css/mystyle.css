@@ -1,5 +1,5 @@
 body {
-    background-color: #6e4337 !important;
+    background-color: #f0ded3 !important;
 }
 
 nav .navbar-nav li a{
@@ -15,10 +15,11 @@ nav .navbar-nav li a{
 
 #picture{
     background-image: url("../images/cup.jpg");
-    
     background-size: cover;
     height: 500px;
-    width: 900px;
+    width: 800px;
+    animation-name: myfadeIn;
+    animation-duration: 4s;
 }
 
 #mainMenu {
@@ -43,3 +44,21 @@ nav .navbar-nav li a{
 .newheight {
     height:100px;
 }
+
+@keyframes myfadeIn {
+    from {
+        opacity: 0;
+    }
+    
+    to {
+        opacity: 1;
+    } 
+}
+
+@keyframes anim1{
+	from {opacity:0;}
+    to {opacity:1;}
+}
+
+
+
