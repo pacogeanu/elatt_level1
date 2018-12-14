@@ -45,6 +45,7 @@ nav .navbar-nav li a{
     height:100px;
 }
 
+/* ** animation sample 1 ** */
 @keyframes myfadeIn {
     from {
         opacity: 0;
@@ -59,6 +60,34 @@ nav .navbar-nav li a{
 	from {opacity:0;}
     to {opacity:1;}
 }
+
+/* ** animation sample 2 ** */
+#square:hover{
+	transform: rotate(45deg);
+	-webkit-transform: rotate(45deg);
+	-o-transform: rotate(45deg); 
+	-moz-transform: rotate(45deg);
+}
+
+.location{
+	top: 39%;
+	left: 45%;
+}
+
+#square {
+    position: absolute;
+	-webkit-transition: all 2s ease-in-out;
+    -moz-transition: all 2s ease-in-out;
+    -o-transition: all 2s ease-in-out;
+    height:50px;
+    width:50px;
+    background-color: red;
+}
+
+/*
+<div id="square" class="location">
+</div>
+*/
 
 
 
