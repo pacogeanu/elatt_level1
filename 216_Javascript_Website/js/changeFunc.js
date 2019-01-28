@@ -1,4 +1,4 @@
-var myContent = {'TRIANGLE': {description:"A triangle is a polygon with three edges and three vertices. It is one of the basic shapes in geometry. A triangle with vertices A, B, and C is denoted &#9651;ABC.", image:"<svg height='300' width='300'><path stroke='#000' d='m20,250l130,-250l130,250l-130,0z' stroke-width='2' fill='#fff'/></svg>"}, "SQUARE": {description:"In geometry, a square is a regular quadrilateral, which means that it has four equal sides and four equal angles (90-degree angles). It can also be defined as a rectangle in which two adjacent sides have equal length. A square with vertices ABCD would be denoted &#9634;ABCD.", image:" <svg height='300' width='300'><rect height='270' width='270' y='10' x='10' stroke-width='2' stroke='#000' fill='white'/></svg>"}, "CIRCLE": {description:"A circle is a simple closed shape. It is the set of all points in a plane that are at a given distance from a given point, the centre; equivalently it is the curve traced out by a point that moves so that its distance from a given point is constant. The distance between any of the points and the centre is called the radius.", image: "<svg height='300' width='300'> <circle cx='150' cy='150' r='130' stroke='black' stroke-width='2' fill='white' /></svg>"}};
+var myContent = {'TRIANGLE': {description:"A triangle is a polygon with three edges and three vertices. It is one of the basic shapes in geometry. A triangle with vertices A, B, and C is denoted &#9651;ABC.", image:"<svg height='300' width='300'><path class='svgdraw' stroke='#000' d='m20,250l130,-250l130,250l-130,0z' stroke-width='2' fill='#fff'/></svg>"}, "SQUARE": {description:"In geometry, a square is a regular quadrilateral, which means that it has four equal sides and four equal angles (90-degree angles). It can also be defined as a rectangle in which two adjacent sides have equal length. A square with vertices ABCD would be denoted &#9634;ABCD.", image:" <svg height='300' width='300'><rect class='svgdraw' height='270' width='270' y='10' x='10' stroke-width='2' stroke='#000' fill='white'/></svg>"}, "CIRCLE": {description:"A circle is a simple closed shape. It is the set of all points in a plane that are at a given distance from a given point, the centre; equivalently it is the curve traced out by a point that moves so that its distance from a given point is constant. The distance between any of the points and the centre is called the radius.", image: "<svg height='300' width='300'> <circle class='svgdraw' cx='150' cy='150' r='130' stroke='black' stroke-width='2' fill='white' /></svg>"}};
 
 function updateInfo(elem) {
     var description = myContent[elem.innerText].description;
@@ -10,7 +10,7 @@ function updateInfo(elem) {
         
         if(document.getElementsByClassName("image")[0]){
             document.getElementsByClassName("image")[0].innerHTML = image;
-            document.getElementsByClassName("image")[0].style.backgroundSize = "cover";
+            document.getElementsByClassName("svgdraw")[0].style.fill = document.body.style.backgroundColor;
         }
         
         for (let el of document.getElementsByClassName("objects")[0].children) {
@@ -23,30 +23,18 @@ function updateInfo(elem) {
 
 function chgPgBgColor(elem){
     var aColor = elem.style.backgroundColor;
+    console.log(aColor);
     return function() {
         document.body.style.backgroundImage = "none";
-        //document.bgColor = aColor; -- deprecated !!!
         document.body.style.backgroundColor = aColor;
+        document.getElementsByClassName("svgdraw")[0].style.fill = aColor;
     };  
 }
 
 function chgPgTextColor(elem){
-    var aColor = elem.style.backgroundColor;
-    return function() {
-        //document.fgColor = aColor; -- document.fgColor is deprecated in DOM Level 2 HTML.
-        document.body.style.color = aColor;
-        for (let el of document.getElementsByClassName("objects")[0].children) {
-            el.style.color = aColor;
-        }
-        document.getElementsByTagName("h1")[0].style.color = aColor;
-    };  
-}
-
-function chgPgTextColor2(elem){
     //var aColor = elem.style.backgroundColor;
     var aColor = elem.style.borderBottomColor;
     return function() {
-        //document.fgColor = aColor; -- document.fgColor is deprecated in DOM Level 2 HTML.
         document.body.style.color = aColor;
         for (let el of document.getElementsByClassName("objects")[0].children) {
             el.style.color = aColor;
@@ -72,14 +60,13 @@ for (let el of document.getElementById("background").children) {
 }
 
 for (let el of document.getElementById("foreground").children) {
-   el.onclick = chgPgTextColor2(el);
+   el.onclick = chgPgTextColor(el);
 }
 
 for (let el of document.getElementById("images").children) {
    el.onclick = chgPgImg(el);
 }
 
-// swap 1st with the 3rd elem of main2 list
 function createTheme1(){
     var objList = document.getElementById("main1");  
     var swap = objList.removeChild(objList.children[1]);
@@ -99,7 +86,6 @@ function createTheme3() {
     for(let el of document.getElementsByClassName("area")){
         el.style.backgroundColor = "transparent";
     }
-    
     document.body.style.backgroundColor = "#c0d3def0";
     for (let el of document.getElementsByClassName("customArea")){
         el.style.borderStyle = "none";
