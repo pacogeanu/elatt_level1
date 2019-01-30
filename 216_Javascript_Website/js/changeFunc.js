@@ -23,7 +23,7 @@ function updateInfo(elem) {
 
 function chgPgBgColor(elem){
     var aColor = elem.style.backgroundColor;
-    console.log(aColor);
+    
     return function() {
         document.body.style.backgroundImage = "none";
         document.body.style.backgroundColor = aColor;
@@ -32,8 +32,8 @@ function chgPgBgColor(elem){
 }
 
 function chgPgTextColor(elem){
-    //var aColor = elem.style.backgroundColor;
     var aColor = elem.style.borderBottomColor;
+    
     return function() {
         document.body.style.color = aColor;
         for (let el of document.getElementsByClassName("objects")[0].children) {
@@ -45,6 +45,7 @@ function chgPgTextColor(elem){
 
 function chgPgImg(elem){
     var aColor = elem.style.backgroundImage;
+    
     return function() {
        document.body.style.backgroundImage = elem.style.backgroundImage;
     };  
@@ -70,6 +71,7 @@ for (let el of document.getElementById("images").children) {
 function createTheme1(){
     var objList = document.getElementById("main1");  
     var swap = objList.removeChild(objList.children[1]);
+    
     objList.appendChild(swap);
     swap = objList.removeChild(objList.children[0]);
     objList.appendChild(swap);   
