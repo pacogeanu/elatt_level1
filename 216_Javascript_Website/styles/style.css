@@ -7,19 +7,19 @@ body {
 
 h1{
     color: #0572b1f0;
-    margin-top: 4%;
+    margin-top: 3%;
 }
 
 #intro {
     width:70%;
     margin:auto;
-    margin-top: 4%;
+    margin-top: 3%;
 }
 
 #main1 {
     width:90%;
     margin:auto;
-    margin-top: 4%;
+    margin-top: 3%;
     display:flex;
     justify-content: center;
 }
@@ -28,7 +28,7 @@ h1{
     display: flex;
     justify-content: space-around;
     margin:auto;
-    margin-top: 6%;
+    margin-top: 5%;
     width:80%;
 }
 
